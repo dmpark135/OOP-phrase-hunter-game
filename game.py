@@ -1,3 +1,5 @@
 # Create your Game class logic in here.
 class Game:
-    pass
+    def __init__(self, missed = 0, phrases = [], active_phrase = None, guesses):
+        self.guesses = [" "]
+        
