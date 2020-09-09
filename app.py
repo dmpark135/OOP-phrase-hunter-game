@@ -1,10 +1,8 @@
 
-from phrase import Phrase
 from game import Game
 
 def main():
 
-    phrase = Phrase('Life is like a box of chocolates')
     game = Game()
     
     for phrase in game.phrases:
