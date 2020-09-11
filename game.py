@@ -11,12 +11,12 @@ class Game:
             Phrase('you have to see the matrix for yourself'),
             Phrase('life is like a box of chocolates')
             ]
-        self.active_phrase = get_random_phrase
+        self.active_phrase = self.get_random_phrase()
         #can't test this
         self.guesses = [" "]
         
     def get_random_phrase(self):
-        return random.choice(self.phrases))
+        return random.choice(self.phrases)
       
 
         

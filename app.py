@@ -7,7 +7,7 @@ def main():
     game = Game()
     
 def print_phrase(x):
-    print(f"The phrase is:{x.phrase}")
+    print(f"The phrase is:{x.phase}")
     #doen't work. why is the class behind vs game front
    
 game = Game()
