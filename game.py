@@ -3,6 +3,8 @@ import random
 from phrase import Phrase
 
 class Game:
+
+    
     def __init__(self, missed = 0, phrases = [], active_phrase = None, guesses = []):
         self.missed = missed
         self.phrases = [Phrase('Hello world'),
@@ -12,8 +14,11 @@ class Game:
             Phrase('life is like a box of chocolates')
             ]
         self.active_phrase = self.get_random_phrase()
-        #can't test this
+        
         self.guesses = [" "]
+        
+    def welcome(self):
+        print('welcome to the thunderdome') 
         
     def get_random_phrase(self):
         return random.choice(self.phrases)
