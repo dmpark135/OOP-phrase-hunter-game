@@ -27,33 +27,16 @@ class Game:
         self.welcome()
         print("Number missed: " + str(self.missed))
         print(self.active_phrase.display(self.guesses))
-        user_guess = self.get_guess([])
+        user_guess = self.get_guess()
         self.guesses.append(user_guess)
-        my_str = ''
-        for i in self.guesses:
-          my_str = my_str + i
-        print(my_str)
+       
         print(self.active_phrase.display(self.guesses))
         
-     '''   
-    def start(self):
-        self.welcome()
-        print('numbered missed: ' + str(self.missed))  # print the number of missed
-        print(self.active_phrase.display(self.guesses))
-        user_guess = self.get_guess()  # a single char
-        self.guesses.append(user_guess)  # append the char to the list of guesses
 
-        my_str = ''
-        for i in self.guesses:
-          my_str = my_str + i
-        print(my_str)
-        print(self.active_phrase.display(self.guesses))    
-            
-       ''' 
     def get_guess(self):
         
-        self.guesses = input('Enter a letter: ')
-        print(self.guesses)
+        x = input('Enter a letter: ')
+        return x
         
         
       

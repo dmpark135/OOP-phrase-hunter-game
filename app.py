@@ -23,7 +23,7 @@ def main():
 #print_phrase(game.get_random_phrase())
 #print_phrase(game.get_random_phrase())
 #print_phrase(game.get_random_phrase())
-#print_phrase(game.get_random_phrase())
+#print_phrase(game.get_random_phrase())o
 #print_phrase(game.get_random_phrase())    
      
 #print(game.active_phrase.phrase)
