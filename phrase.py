@@ -5,14 +5,6 @@ class Phrase:
                
         self.phrase = phrase.lower()
         
-'''
-    def display(self, guesses):
-        for i in range(len(self.phrase)):
-            if self.phrase[i] in guesses:
-                print(f"{self.phrase[i]} ", end = "")
-            else:
-                print('_', end = "")
-'''
 
 
     def display(self, guesses):
@@ -21,13 +13,21 @@ class Phrase:
                 print(f"{letter} ", end = "")
             else:
                 print('_', end= "")
+
+    def check_guess(self, guess):
+        return guess in self.phrase
+    
+    def check_complete(self, gx):
+        won = True
+        for letter in self.phrase.replace(' ',''):
+            if letter not in gx:
+                won = False
+        return won
+        
+    
+    
         
             
-       ''' 
-MY_PHRASE = Phrase('Hi David')
-# print(MY_PHRASE.phrase)
-print(MY_PHRASE.display('dv'))   
-        '''
-    
+
         
         

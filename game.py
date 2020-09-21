@@ -2,6 +2,7 @@
 import random
 from phrase import Phrase
 
+
 class Game:
 
     
@@ -25,19 +26,34 @@ class Game:
    
     def start(self):
         self.welcome()
-        print("Number missed: " + str(self.missed))
-        print(self.active_phrase.display(self.guesses))
-        user_guess = self.get_guess()
-        self.guesses.append(user_guess)
-       
-        print(self.active_phrase.display(self.guesses))
         
+        while (self.missed < 5):
+           
+            print("Number missed: " + str(self.missed))
+            print(self.active_phrase.display(self.guesses))
+            user_guess = self.get_guess()
+            self.guesses.append(user_guess) 
+            print(self.active_phrase.display(self.guesses))
+            if not self.active_phrase.check_guess(user_guess):
+                self.missed += 1
+                
+        self.game_over()
+        
+            
+  
 
     def get_guess(self):
         
         x = input('Enter a letter: ')
         return x
         
+    def game_over(self):
+        if self.missed == 5:
+            print('you die, game over')
+        else:
+            self.active_phrase.check_complete(self.guesses) == True
+            print('Congratulations! You won')
+            print(self.active_phrase.phrase)
         
       
 
