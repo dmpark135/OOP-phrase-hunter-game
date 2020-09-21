@@ -27,7 +27,8 @@ class Game:
     def start(self):
         self.welcome()
         
-        while (self.missed < 5):
+        while (self.missed < 5 and not self.active_phrase.check_complete(self.guesses)):
+            
            
             print("Number missed: " + str(self.missed))
             print(self.active_phrase.display(self.guesses))
